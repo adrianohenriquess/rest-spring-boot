@@ -13,7 +13,8 @@ import com.github.dozermapper.core.Mapping;
 	"firstName",
 	"lastName",
 	"address",
-	"gender"
+	"gender",
+	"enabled"
 })
 public class PersonVO extends ResourceSupport implements Serializable {
 
@@ -26,9 +27,9 @@ public class PersonVO extends ResourceSupport implements Serializable {
 	private String lastName;
 	private String address;
 	private String gender;
+	private boolean enabled;
 
-	public PersonVO() {
-	}
+	public PersonVO() {}
 
 	public String getFirstName() {
 		return firstName;
@@ -70,11 +71,20 @@ public class PersonVO extends ResourceSupport implements Serializable {
 		this.key = key;
 	}
 
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = super.hashCode();
 		result = prime * result + ((address == null) ? 0 : address.hashCode());
+		result = prime * result + (enabled ? 1231 : 1237);
 		result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
 		result = prime * result + ((gender == null) ? 0 : gender.hashCode());
 		result = prime * result + ((key == null) ? 0 : key.hashCode());
@@ -95,6 +105,8 @@ public class PersonVO extends ResourceSupport implements Serializable {
 			if (other.address != null)
 				return false;
 		} else if (!address.equals(other.address))
+			return false;
+		if (enabled != other.enabled)
 			return false;
 		if (firstName == null) {
 			if (other.firstName != null)
@@ -118,7 +130,5 @@ public class PersonVO extends ResourceSupport implements Serializable {
 			return false;
 		return true;
 	}
-	
-	
 
 }
