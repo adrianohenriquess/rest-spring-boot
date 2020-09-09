@@ -1,0 +1,10 @@
+1) criar os arquivos Dockerfiles, um dentro do projeto e outro fora do projeto
+2) criar o arquivo docker-compose.yml
+3) rodar o comando: sudo docker-compose build, uma pasta antes da pasta do projeto
+4) rodar o comando: sudo docker-compose up para subir a aplicação no docker e o banco de dados, juntos no docker compose com comunicação 
+funcionando graças a alteração do properties do projeto
+5) criar uma conta no docker hub
+6) rodar o comando: sudo docker login docker.io
+7) pode dar um erro, então rodar o comando sudo apt install gnupg2 pass
+8) em seguida informar o login e senha do docker hub
+9) para subir a imagem sudo docker push nome_imagem
