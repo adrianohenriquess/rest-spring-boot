@@ -9,8 +9,8 @@ before_deploy:
 deploy:
   provider: script
   script: 
-    sudo docker push adrianohenriquess/rest-with-springboot-udemy;
-    sudo docker push adrianohenriquess/mysql-with-springboot-udemy;
+    docker push adrianohenriquess/rest-with-springboot-udemy;
+    docker push adrianohenriquess/mysql-with-springboot-udemy;
   on:
     branch: master
 notifications: 
