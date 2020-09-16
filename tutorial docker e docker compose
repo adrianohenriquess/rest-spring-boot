@@ -1,3 +1,14 @@
+usuario e senha aws:
+adriano.henriquesds@gmail.com
+tfdr37128sedt$%
+docker hub 
+adrianohenriquess
+tfdr37128sedt
+e github
+adrianohenriquess
+1598hyli
+
+
 1) criar os arquivos Dockerfiles, um dentro do projeto e outro fora do projeto
 2) criar o arquivo docker-compose.yml
 3) rodar o comando: sudo docker-compose build, uma pasta antes da pasta do projeto
@@ -8,3 +19,7 @@ funcionando graças a alteração do properties do projeto
 7) pode dar um erro, então rodar o comando sudo apt install gnupg2 pass
 8) em seguida informar o login e senha do docker hub
 9) para subir a imagem sudo docker push nome_imagem
+10) Criar uma conta no travis ci com a ajuda da conta no git hub
+11) criar o script .travis.yml na pasta do projeto
+12) criar variaveis de ambiente no repositorio associado ao travis ci no travis ci, menu more options--> environment variables (usuario e senha do docker hub)
+13) com isso toda vez que for comitado algo no github, uma trigger é disparada no travis ci para rodar o build e implantar 
